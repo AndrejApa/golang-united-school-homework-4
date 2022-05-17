@@ -33,7 +33,7 @@ func StringSum(input string) (output string, err error) {
 	}
 
 	if len(x) != 2 {
-		return "", fmt.Errorf("err: %w", errorNotTwoOperands)
+		return "", fmt.Errorf("%w", errorNotTwoOperands)
 	}
 	return strconv.Itoa(x[0] + x[1]), nil
 }
