@@ -17,7 +17,7 @@ func StringSum(input string) (output string, err error) {
 
 	input = strings.Join(strings.Fields(input), "")
 	if input == "" {
-		return "", fmt.Errorf("err: %w", errorEmptyInput)
+		return "", fmt.Errorf("%w", errorEmptyInput)
 	}
 
 	var a = regexp.MustCompile(`([+-]?[^+-]+)`)
@@ -27,7 +27,7 @@ func StringSum(input string) (output string, err error) {
 	for _, v := range b {
 		value, err := strconv.Atoi(v[0])
 		if err != nil {
-			return "", fmt.Errorf("err: %w", err)
+			return "", fmt.Errorf("%w", err)
 		}
 		x = append(x, value)
 	}
